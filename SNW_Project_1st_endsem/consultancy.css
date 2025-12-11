@@ -89,7 +89,7 @@ h1, h2 {
 .nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: var(--secondary);
+    color: black;
     font-weight: 500;
 }
 
