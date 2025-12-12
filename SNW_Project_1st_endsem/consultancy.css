@@ -2,12 +2,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    --primary: #1b4db1;
-    --secondary: #0b2545;
-    --light: black;
-    --grey: #f5f7fa;
-    --dark: #222;
-}
+    background: white;
+} 
 
 * {
     margin: 0;
@@ -59,7 +55,6 @@ h1, h2 {
     background: blue;
     color: whitesmoke;
 }
-
 .secondary-btn {
     background: whitesmoke;
     border: 2px solid blue;
@@ -212,8 +207,7 @@ textarea {
     .hamburger {
         display: block;
     }
-
     .nav-cta {
-        display: none;
-    }
+    display: block !important;
+}
 }
