@@ -1,20 +1,46 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
 
-hamburger.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+var hamburger = document.getElementById("hamburger");
+var navMenu = document.getElementById("navMenu");
+
+
+hamburger.addEventListener("click", function () {
+    
+    if (navMenu.style.display === "flex") {
+        navMenu.style.display = "none";
+    }
+    
+    else {
+        navMenu.style.display = "flex";
+    }
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
-            navMenu.style.display = "none";
+
+var allLinks = document.querySelectorAll('a[href^="#"]');
+
+allLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+        var sectionId = link.getAttribute("href");
+        var section = document.querySelector(sectionId);
+
+        if (section) {
+            event.preventDefault();
+            section.scrollIntoView({ behavior: "smooth" });
+
+           
+            if (window.innerWidth <= 768) {
+                navMenu.style.display = "none";
+            }
         }
     });
 });
+
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+        navMenu.style.display = "flex";
+    }
+});
+
 
 const counters = document.querySelectorAll('.counter');
 const speed = 120;
