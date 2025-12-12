@@ -7,6 +7,10 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    color: black;
+    background: var();
+    line-height: 1.6;
+    position: relative;
 } 
 
 .logo {
@@ -17,12 +21,6 @@ body{
     transform: translateX(-50%);
 }
 
-body {
-    color: black;
-    background: var();
-    line-height: 1.6;
-    position: relative;
-}
 .section {
     padding: 80px 0;
 }
